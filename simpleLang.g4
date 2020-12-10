@@ -63,14 +63,14 @@ operations
     ;
     
 operation
-    : PLUSOPERATOR expression           #add operator operation
-    | MINUSOPERATOR expression          #substract operator operation
-    | MULTIPLICATIONOPERATOR expression #multiply operator operation
-    | DIVISIONOPERATOR expression       #division operator operation
-    | EQUALTO expression                #equal to condition
-    | GREATERTHAN expression            #greater than condition
-    | OR expression                     #or operation
-    | AND expression                    #and operation
+    : PLUSOPERATOR expression           #plusop
+    | MINUSOPERATOR expression          #minusop
+    | MULTIPLICATIONOPERATOR expression #multiplicationop
+    | DIVISIONOPERATOR expression       #divisionop
+    | EQUALTO expression                #equalop
+    | GREATERTHAN expression            #greaterop
+    | OR expression                     #orop
+    | AND expression                    #andop
     ;
 
 
@@ -178,7 +178,6 @@ NUMBER
     : DIGIT+
     ;
 
-    
 STRING_LITERAL
  : ( SHORT_STRING | LONG_STRING )
  ;

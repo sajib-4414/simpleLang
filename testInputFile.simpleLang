@@ -15,7 +15,6 @@ print_val "hello world"
 print_val var
 print_val true
 
-print_val newline
 
 assign_var a
 set_var_val 4
