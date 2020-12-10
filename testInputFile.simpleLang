@@ -1,0 +1,62 @@
+start_program
+declare_intvar var
+initialize_var 45
+declare_intvar true
+initialize_var @bool_true
+declare_intvar false
+initialize_var @bool_false
+declare_intvar n
+initialize_var 15
+declare_intvar m
+initialize_var n
+print_val n
+print_val m
+print_val "hello world"
+print_val var
+print_val true
+
+print_val newline
+
+assign_var a
+set_var_val 4
+add_val 5
+mult_val 2
+end_assignment
+print_val a
+
+assign_var a
+set_var_val 1
+or_condition 0
+and_condition 1
+end_assignment
+print_val a
+
+if_condition true
+print_val "true is true"
+else_condition
+print_val "true is not true"
+end_if_condition
+
+if_condition false
+print_val "false is true"
+else_condition
+print_val "false is not true"
+end_if_condition
+
+declare_intvar loop
+initialize_var @bool_true
+declare_intvar n
+initialize_var 0
+while_condition loop
+assign_var n
+set_var_val n
+add_val 1
+end_assignment
+print_val n
+assign_var loop
+set_var_val 10
+gt_than n
+end_assignment
+end_while_condition
+
+end_program
