@@ -1,0 +1,33 @@
+start_program
+
+declare_intvar x
+initialize_var 35
+print_val x
+
+declare_intvar y
+initialize_var x
+print_val y
+
+print_val "This is a plain string"
+
+start_assignment a
+set_var_val 4
+add_val 5
+end_assignment
+print_val a
+
+if_condition 1
+print_val "Printing inside if -test1"
+else_condition
+print_val "Printing inside else -test1"
+end_if_condition
+
+start_assignment vart
+set_var_val 10
+if_gt_than 5
+end_assignment
+print_val vart
+
+
+
+end_program

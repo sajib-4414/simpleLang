@@ -1,0 +1,29 @@
+start_program
+
+declare_intvar p
+initialize_var 10
+
+
+declare_intvar x
+initialize_var @bool_true_not_bool
+declare_intvar y
+initialize_var @bool_false
+
+print_val x
+print_val y
+print_val "This is a syntax test"
+
+if_condition undef_var
+print_val "1 is true"
+else_condition
+print_val "0 is not true"
+
+
+
+start_assignment a
+set_var_val 4
+add_val 5
+end_assignment
+print_val a
+
+end_program

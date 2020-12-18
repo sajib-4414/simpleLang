@@ -16,14 +16,14 @@ print_val var
 print_val true
 
 
-assign_var a
+start_assignment a
 set_var_val 4
 add_val 5
 mult_val 2
 end_assignment
 print_val a
 
-assign_var a
+start_assignment a
 set_var_val 1
 or_condition 0
 and_condition 1
@@ -47,12 +47,12 @@ initialize_var @bool_true
 declare_intvar n
 initialize_var 0
 while_condition loop
-assign_var n
+start_assignment n
 set_var_val n
 add_val 1
 end_assignment
 print_val n
-assign_var loop
+start_assignment loop
 set_var_val 10
 gt_than n
 end_assignment

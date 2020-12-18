@@ -111,11 +111,11 @@ DIVISIONOPERATOR
     ;
     
 EQUALTO
-    : 'equal_to'
+    : 'if_equal_to'
     ;
     
 GREATERTHAN
-    : 'gt_than'
+    : 'if_gt_than'
     ;
 
 OR
@@ -139,7 +139,7 @@ SETINITIALVALUE
     ;
     
 ASSIGNVARIABLE
-    : 'assign_var'
+    : 'start_assignment'
     ;
 
 SETVALUE

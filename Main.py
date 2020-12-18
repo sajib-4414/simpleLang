@@ -6,7 +6,8 @@ import logging
 import sys
 
 def main():
-    input = FileStream("testInputFile.simpleLang")
+    #tests/test_fail/test_syntax.simpleLang
+    input = FileStream("tests/test_pass/test_syntax.simpleLang")
     lexer = simpleLangLexer(input)
     stream = CommonTokenStream(lexer)
     parser = simpleLangParser(stream)

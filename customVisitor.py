@@ -1,7 +1,6 @@
 # Generated from simpleLang.g4 by ANTLR 4.9.2
 from antlr4 import *
 from simpleLangVisitor import simpleLangVisitor
-import logging
 
 # This class defines a complete visitor class also called as a walker
 #for a parse tree produced by simpleLangParser.
@@ -13,19 +12,16 @@ class customVisitor(simpleLangVisitor):
 
     # Visit a the main programs parse tree
     def visitProgram(self, ctx):
-        logging.debug("program")
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by main_function.
     def visitMain_function(self, ctx):
-        logging.debug("main_function")
         return self.visitChildren(ctx)
 
 
     # walker method for visiting statements parse tree
     def visitStatements(self, ctx):
-        logging.debug("statements")
         return self.visitChildren(ctx)
 
 
@@ -37,27 +33,23 @@ class customVisitor(simpleLangVisitor):
 
     # Visit a parse tree produced by simpleLangParser#print_stmt.
     def visitPrint_stmt(self, ctx):
-        logging.debug("print_stmt")
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by simpleLangParser#print_sconst_stmt.
     def visitPrint_sconst_stmt(self, ctx):
-        logging.debug("print_sconst_stmt")
         print(ctx.children[1].symbol.text)
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by simpleLangParser#print_var_stmt.
     def visitPrint_var_stmt(self, ctx):
-        logging.debug("print_var_stmt")
         print(memory[ctx.children[1].symbol.text])
         return self.visitChildren(ctx)
     
     
     # Visit a parse tree produced by simpleLangParser#var_decl_stmt.
     def visitVar_decl_stmt(self, ctx):
-        logging.debug("var_decl_stmt")
         var = self.visit(ctx.children[3])
         memory[ctx.children[1].symbol.text] = var
         return self.visitChildren(ctx)
@@ -69,13 +61,11 @@ class customVisitor(simpleLangVisitor):
         value = self.visit(ctx.children[3])
         func = self.visit(ctx.children[4])
         memory[key] = func(value)       
-        logging.debug("var_assign_stmt -> " + str(key) + " = " + str(func(value)))
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by simpleLangParser#ifelseendif.
     def visitIfelseendif(self, ctx):
-        logging.debug("ifElseEndif")
         if self.visit(ctx.children[1]) == 1:
             return self.visit(ctx.children[2])
         else:
@@ -84,13 +74,11 @@ class customVisitor(simpleLangVisitor):
 
     # Visit a parse tree produced by simpleLangParser#ifendid.
     def visitIfendid(self, ctx):
-        logging.debug("ifEndif")
         if self.visit(ctx.children[1]) == 1:
             return self.visit(ctx.children[2])
             
     # Visit a parse tree produced by simpleLangParser#while_stmt.
     def visitWhile_stmt(self, ctx):   
-        logging.debug("while_stmt")
         while self.visit(ctx.children[1]) == 1:
             self.visit(ctx.children[2])
 

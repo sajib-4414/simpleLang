@@ -68,11 +68,11 @@ class simpleLangParser ( Parser ):
     literalNames = [ u"<INVALID>", u"'start_program'", u"'end_program'", 
                      u"'@'", u"'bool_true'", u"'bool_false'", u"'add_val'", 
                      u"'subtract_val'", u"'mult_val'", u"'divide_val'", 
-                     u"'equal_to'", u"'gt_than'", u"'or_condition'", u"'and_condition'", 
-                     u"'print_val'", u"'declare_intvar'", u"'initialize_var'", 
-                     u"'assign_var'", u"'set_var_val'", u"'end_assignment'", 
-                     u"'if_condition'", u"'else_condition'", u"'end_if_condition'", 
-                     u"'while_condition'", u"'end_while_condition'" ]
+                     u"'if_equal_to'", u"'if_gt_than'", u"'or_condition'", 
+                     u"'and_condition'", u"'print_val'", u"'declare_intvar'", 
+                     u"'initialize_var'", u"'start_assignment'", u"'set_var_val'", 
+                     u"'end_assignment'", u"'if_condition'", u"'else_condition'", 
+                     u"'end_if_condition'", u"'while_condition'", u"'end_while_condition'" ]
 
     symbolicNames = [ u"<INVALID>", u"BEGINMAIN", u"ENDMAIN", u"AT", u"TRUE", 
                       u"FALSE", u"PLUSOPERATOR", u"MINUSOPERATOR", u"MULTIPLICATIONOPERATOR", 
